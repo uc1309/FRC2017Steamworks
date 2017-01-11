@@ -15,7 +15,9 @@ import edu.wpi.first.wpilibj.CameraServer;
 import org.opencv.core.Mat;
 import org.opencv.imgproc.Imgproc;
 import org.usfirst.frc.team949.robot.commands.ExampleCommand;
-import org.usfirst.frc.team949.robot.subsystems.ExampleSubsystem;
+import org.usfirst.frc.team949.robot.subsystems.DriveTrain;
+import org.usfirst.frc.team949.robot.subsystems.Pickup;
+import org.usfirst.frc.team949.robot.subsystems.Winch;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -26,7 +28,9 @@ import org.usfirst.frc.team949.robot.subsystems.ExampleSubsystem;
  */
 public class Robot extends IterativeRobot {
 
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	public static final DriveTrain driveTrain = new DriveTrain();
+	public static final Winch winch = new Winch();
+	public static final Pickup pickup = new Pickup();
 	public static OI oi;
 
 	Command autonomousCommand;
